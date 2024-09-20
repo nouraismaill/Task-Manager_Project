@@ -1,6 +1,8 @@
 import cors from "cors";
 import express from "express";
 import connectDB from "./config/db.js";
+import authRoute from "./routes/auth.js";
+import userRoute from "./routes/user.js";
 const app = express();
 const port = 3000;
 
@@ -10,6 +12,8 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.send("API worked");
 });
+app.use("/api/auth", authRoute);
+app.use("/api/user", userRoute);
 app.get("/user", (req, res) => {
   const query = "SELECT * FROM users";
 
