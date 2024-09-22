@@ -9,10 +9,7 @@ const authenticate = async (req, res, next) => {
   try {
     const token = authToken.split(" ")[1];
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
-
-    // Assign decoded user info to req.user
-    req.user = decoded; // This is where user data will be stored
-
+    req.user = decoded;
     next();
   } catch (error) {
     if (error.name === "TokenExpiredError") {

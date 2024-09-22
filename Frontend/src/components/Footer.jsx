@@ -8,7 +8,6 @@ const Footer = () => {
         <a href="/" className="font-semibold text-xl">
           Task Manager
         </a>
-        {/* Bold text and larger font size */}
       </div>
     </footer>
   );

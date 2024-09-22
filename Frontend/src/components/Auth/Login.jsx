@@ -40,7 +40,7 @@ const Login = () => {
           token: result.token,
         },
       });
-
+      localStorage.setItem("token", result.token);
       setLoading(false);
       toast.success(result.message);
       navigate("/tasks");

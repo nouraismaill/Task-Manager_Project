@@ -1,12 +1,11 @@
 import connectDB from "../config/db.js";
 
 export const getUser = async (req, res) => {
-  const userId = req.user.id; // Ensure req.user is assigned properly by middleware
+  const userId = req.user.id;
 
   try {
     const userQuery = "SELECT username FROM users WHERE id=?";
 
-    // Using async/await for the query execution
     const [result] = await connectDB.promise().query(userQuery, [userId]);
 
     if (result.length === 0) {
