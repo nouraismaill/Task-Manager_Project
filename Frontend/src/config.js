@@ -1,2 +1,2 @@
-export const BASE_URL = "https://taskmanager-nh52.onrender.com";
+export const BASE_URL = "http://localhost:3000";
 export const token = localStorage.getItem("token");
