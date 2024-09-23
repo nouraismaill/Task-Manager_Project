@@ -7,12 +7,8 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use(cors({
-    origin: 'https://taskmanagerapp-3gd9.onrender.com', 
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'], 
-    credentials: true 
-}));
+app.use(cors());
+
 
 
 app.get("/", (req, res) => {
