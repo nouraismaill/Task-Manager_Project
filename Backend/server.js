@@ -12,9 +12,9 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.send("API worked");
 });
-app.use("/api/auth", authRoute);
-app.use("/api/user", userRoute);
-app.use("/api/task", taskRoute);
+app.use("/auth", authRoute);
+app.use("/user", userRoute);
+app.use("/task", taskRoute);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
