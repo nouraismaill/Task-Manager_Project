@@ -2,10 +2,10 @@
 import mysql from "mysql2";
 
 const connectDB = mysql.createConnection({
-  host:localhost,
-  user:root,
-  password: Noniye2002$$,
-  database: database,
+  host:'%',
+  user:'root',
+  password: 'Noniye2002$$',
+  database: 'database',
 });
 
 console.log("Attempting to connect to MySQL database...");
